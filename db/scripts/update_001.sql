@@ -1,4 +1,4 @@
-create table items (
+create table rabbit (
    id serial primary key not null,
-   name varchar(2000)
+   created_date timestamp without timezone default now()
 );
