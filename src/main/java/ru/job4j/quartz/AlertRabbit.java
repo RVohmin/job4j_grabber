@@ -6,6 +6,5 @@ public class AlertRabbit {
         Store store = new Store();
         Sheduler sheduler = new Sheduler(store);
         sheduler.shedule(store.init());
-
     }
 }
