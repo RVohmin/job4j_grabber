@@ -21,7 +21,7 @@ public class Sheduler {
         this.store = store;
     }
 
-    public List<Long> shedule(Connection cn) {
+    public void schedule(Connection cn) {
         List<Long> list = new ArrayList<>();
         try {
             int time = 0;
@@ -53,7 +53,6 @@ public class Sheduler {
             e.printStackTrace();
         }
         store.insertDB(list);
-        return list;
     }
 
 }
