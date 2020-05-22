@@ -52,7 +52,7 @@ public class Sheduler {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        this.store.insertDB(list);
+        store.insertDB(list);
         return list;
     }
 
