@@ -15,6 +15,6 @@ public class ParseDateTest {
         String exp = parseDate.parse(str);
         System.out.println(exp);
         String rsl = "05 мая 2019, 23:40";
-        assertEquals(rsl, exp);
+        assertEquals(exp, rsl);
     }
 }
