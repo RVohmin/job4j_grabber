@@ -12,7 +12,7 @@ public class Rabbit implements Job {
 
     @Override
     public void execute(JobExecutionContext context) {
-        System.out.println("Rabbit runs here ...");
+        System.out.println("Rabbit runs here . . .");
         List<Long> store = (List<Long>) context.getJobDetail().getJobDataMap().get("list");
         store.add(System.currentTimeMillis());
     }
