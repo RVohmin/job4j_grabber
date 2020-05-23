@@ -13,6 +13,7 @@ public class ParseDateTest {
         ParseDate parseDate = new ParseDate();
         String date = "5 май 19, 23:40";
         String exp = parseDate.parse(date);
+        System.out.println(exp);
         String rsl = "05 мая 2019, 23:40";
         assertEquals(rsl, exp);
     }
