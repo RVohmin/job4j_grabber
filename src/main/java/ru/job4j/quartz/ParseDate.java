@@ -33,7 +33,7 @@ public class ParseDate {
             arr[1] = "сент.";
         }
         String str = String.join(" ", arr);
-        SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy, HH:mm", Locale.forLanguageTag("ru"));
+        SimpleDateFormat sdf = new SimpleDateFormat("dd MMMM yyyy г., в HH:mm", Locale.forLanguageTag("ru"));
         cal.setTime(dateFormat.parse(str));
         return sdf.format(cal.getTime());
     }
