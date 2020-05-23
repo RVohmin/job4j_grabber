@@ -3,6 +3,7 @@ package ru.job4j.quartz;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Locale;
 
 public class ParseDate {
     String parse(String value) throws ParseException {
@@ -32,7 +33,7 @@ public class ParseDate {
             arr[1] = "сент.";
         }
         String str = String.join(" ", arr);
-        SimpleDateFormat sdf = new SimpleDateFormat("d MMM yy, HH:mm");
+        SimpleDateFormat sdf = new SimpleDateFormat("d MMM yy, HH:mm", Locale.getDefault());
         cal.setTime(sdf.parse(str));
         System.out.println(dateFormat.format(cal.getTime()));
         return dateFormat.format(cal.getTime());
