@@ -8,7 +8,7 @@ import java.util.Locale;
 public class ParseDate {
     String parse(String value) throws ParseException {
         Calendar cal = Calendar.getInstance();
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMM yy, HH:mm", Locale.getDefault());
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMM yy, HH:mm", Locale.forLanguageTag("ru"));
 
         if (value.contains("сегодня")) {
             return dateFormat.format(cal.getTime());
@@ -33,7 +33,7 @@ public class ParseDate {
             arr[1] = "сент.";
         }
         String str = String.join(" ", arr);
-        SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy, HH:mm", Locale.getDefault());
+        SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy, HH:mm", Locale.forLanguageTag("ru"));
         cal.setTime(dateFormat.parse(str));
         return sdf.format(cal.getTime());
     }
