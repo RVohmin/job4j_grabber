@@ -8,7 +8,7 @@ import java.util.Locale;
 public class ParseDate {
     String parse(String value) throws ParseException {
         Calendar cal = Calendar.getInstance();
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMM yy, HH:mm");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMM yy, HH:mm", Locale.getDefault());
 
         if (value.contains("сегодня")) {
             return dateFormat.format(cal.getTime());
