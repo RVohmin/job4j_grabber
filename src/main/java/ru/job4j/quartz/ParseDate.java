@@ -5,7 +5,16 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 
+/**
+ * This class for correct parsing custom date format
+ */
 public class ParseDate {
+    /**
+     *
+     * @param value - String contains custom date format
+     * @return - String contains standart date format
+     * @throws ParseException - Exception if date format unparseable
+     */
     String parse(String value) throws ParseException {
         Calendar cal = Calendar.getInstance();
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMM yy, HH:mm", Locale.forLanguageTag("ru"));
